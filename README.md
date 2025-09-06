@@ -1,1 +1,1 @@
-# algoritmit-ja-teko-ly-harjoitusty-
+# algoritmit-ja-tekoaly-harjoitustyo
