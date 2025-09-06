@@ -1,0 +1,42 @@
+## Ohjelmointikieli
+Työssä käytän **Pythonia**. 
+
+## Algoritmit ja tietorakenteet
+Projektin pääalgoritmina käytän **Expectiminimax-algoritmia**, jota pitää hieman mukauttaa heurestiikoilla
+
+Tietorakenteina hyödynnän erityisesti:  
+- **hakupuita** (Expectiminimax-puun rakentamiseen)  
+- **matriisirakennetta (2D-listat)** pelilaudan mallintamiseen  
+
+## Ongelma
+Ratkaistava ongelma on **2048-pelin ratkaisu tekoälyn avulla**. Tavoitteena on luoda tekoäly, joka kykenee voittamaan pelin (tuottamaan laatan 2048 tai suuremman) ja optimoimaan pisteet.  
+
+## Syötteet ja niiden käyttö
+Ohjelma saa syötteikseen vain simppelit **ohjausliikkeet**: ylös, alas, vasen, oikea.  
+Tekoäly laskee näistä vaihtoehdoista todennäköisyyksiin perustuen parhaan liikkeen, jonka avulla maksimoidaan pitkän aikavälin pisteet ja mahdollisuus saavuttaa korkeat laatat. Käyttäjä ei siis syötä siirtoja, vaan ohjelma toimii täysin automaattisesti syötteiden simuloinnin avulla.  
+
+## Aika- ja tilavaativuus
+- Expectiminimaxin **aikavaativuus** on pahimmillaan `O(b^m n^m)`, missä `n` on haarautumistekijä (tässä siirtojen määrä * tyhjien ruutujen määrä) ja parhaimmillaan O(b^m), jolloin kaikki siirrot tiedetän etukäteen 
+
+- **Tilavaativuus** on `O(b*d)`, koska jokaisessa tasossa täytyy ylläpitää pelilaudan tilat.  
+
+## Lähteet
+
+Toistaiseksi olen käyttänyt:
+- Kurssin luentomateriaalit  
+- [2048 AI Research Paper: *AI Plays 2048* (Nie, Hou, An)]  
+- Wikipedia-artikkelit aiheista: *Minimax*, *Expectiminimax*  
+- youtube
+
+Uskon tulevani käyttämään kurssin aikana esimerkiksi:
+- stackoverflow
+- geeksforgeeks
+
+## Harjoitustyön ydin
+Harjoitustyön ydin on **Expectiminimax-algoritmin toteutus ja optimointi 2048-pelissä**.  
+Projektin tarkoitus ei ole ensisijaisesti toteuttaa peliä alusta alkaen, vaan rakentaa siihen tekoäly, joka kykenee ratkaisemaan pelin. Suurin osa kehitysajasta käytetään hakupuun, heuristiikkojen ja karsinnan toteuttamiseen sekä niiden toimivuuden analysointiin.  
+
+## Muut tiedot
+- **Opinto-ohjelma:** Tietojenkäsittelytieteen kandidaatti (TKT)  
+- **Dokumentaation kieli:** suomi  
+
