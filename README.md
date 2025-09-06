@@ -1,0 +1,1 @@
+# algoritmit-ja-tekoaly-harjoitustyo
