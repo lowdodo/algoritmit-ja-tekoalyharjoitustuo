@@ -1,6 +1,7 @@
 import unittest
 from gameloop import GameLoop
 
+
 class TestGameLoop(unittest.TestCase):
     def setUp(self):
         self.game_loop = GameLoop()

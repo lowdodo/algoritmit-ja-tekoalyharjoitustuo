@@ -33,6 +33,12 @@ FONT_COLOR_DARK = (60, 40, 80)
 
 
 class UI:
+    '''Class handling the UI rendering and interactions.
+    
+    Attributes:
+        game (Game2048): The game instance to render.
+        screen
+        '''
     def __init__(self, game: Game2048):
         self.game = game
         # Total screen height includes board + button + margins
