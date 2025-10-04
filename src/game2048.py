@@ -3,13 +3,14 @@ import random
 
 class Game2048:
     ''' Class representing the 2048 game logic.
-    
+
     Attributes:
         size (int): The size of the game board (size x size).
         board (list): The current state of the game board.
         directions (list): Possible move directions.
         score (int): The current score of the game.
         '''
+
     def __init__(self, size=4):
         '''Initializor for the 2048 game.'''
         self.size = size
@@ -22,11 +23,11 @@ class Game2048:
     def add_tile(self):
         ''' Add a new tile (2 or 4) to a random empty position on the board.
         uses original probabilities of 90% for 2 and 10% for 4'''
-        empty_tiles = [(row, colum) for row in range(self.size)
-                       for colum in range(self.size) if self.board[row][colum] == 0]
+        empty_tiles = [(row, col) for row in range(self.size)
+                       for col in range(self.size) if self.board[row][col] == 0]
         if empty_tiles:
-            row, colum = random.choice(empty_tiles)
-            self.board[row][colum] = 2 if random.random() < 0.9 else 4
+            row, col = random.choice(empty_tiles)
+            self.board[row][col] = 2 if random.random() < 0.9 else 4
 
     def slide_and_merge(self, row):
         new_row = [i for i in row if i != 0]

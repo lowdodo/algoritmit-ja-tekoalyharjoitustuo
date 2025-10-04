@@ -1,4 +1,4 @@
-# Viikkoraportti 2
+# Viikkoraportti 3
 
 ## Mitä olen tehnyt tällä viikolla?
 
@@ -14,7 +14,7 @@ en välttämättä uutta, mutta muistelin testejä. Opin että vscode antaa virh
 
 ## Mikä jäi epäselväksi tai tuotti vaikeuksia?
 
-oli vaikeuksia testien kanssa, aiheutti päänvaivaa
+oli vaikeuksia testien kanssa, aiheutti päänvaivaa eikä ihan selvinnyt vielä
 
 ## Mitä teen seuraavaksi?
 

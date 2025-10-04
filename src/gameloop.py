@@ -6,13 +6,14 @@ from ai import AI2048
 
 class GameLoop:
     '''Class to manage the game loop, user input, and AI integration.
-    
+
     Attributes:
         game (Game2048): The current game state.
         ui (UI): The user interface for rendering the game.
         ai_enabled (bool): Flag to indicate if AI is enabled.
         depth (int): The depth for the AI's expectiminimax algorithm.
         '''
+
     def __init__(self, size=4, ai_enabled=False, depth=2):
         self.game = Game2048(size=size)
         self.ui = UI(self.game)
@@ -74,7 +75,7 @@ class GameLoop:
 
             if self.game.is_game_over():
                 self.ui.draw_board(self.ai_enabled)
-                pygame.time.wait(1200)
+                pygame.time.wait(2000)
                 print("Game over!")
                 self.running = False
 

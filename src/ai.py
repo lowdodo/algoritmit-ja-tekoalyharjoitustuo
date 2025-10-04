@@ -1,10 +1,15 @@
 from copy import deepcopy
 from game2048 import Game2048
 
+snake = [[2, 2**2, 2**3, 2**4],
+         [2**8, 2**7, 2**6, 2**5],
+         [2**9, 2**10, 2**11, 2**12],
+         [2**16, 2**15, 2**14, 2**13]]
+
 
 class AI2048:
     '''AI player for 2048 using the Expectiminimax algorithm.
-    
+
     Attributes:
         game (Game2048): The current game state.
         depth (int): The depth to which the expectiminimax algorithm should search.
@@ -12,7 +17,7 @@ class AI2048:
 
     def __init__(self, game: Game2048 = None, depth: int = 2):
         '''Initializor for the AI player.
-        
+
         Args:
             game (Game2048, optional): The current game state. Defaults to a new game.
             depth (int, optional): The depth to which the expectiminimax algorithm should search. Defaults to 2.
@@ -22,10 +27,13 @@ class AI2048:
 
     @staticmethod
     def evaluate_board(board):
-        ''' Simple heuristic function to favor board with more empty tiles and higher biggest tile'''
-        empty_tiles = sum(row.count(0) for row in board)
-        max_tile = max(max(row) for row in board)
-        return max_tile + empty_tiles * 10
+        ''
+        h = 0
+        for r in range(len(board)):
+            for c in range(len(board[0])):
+                if board[r][c] != 0:
+                    h += board[r][c] * snake[r][c]
+        return h
 
     def expectiminimax(self, game, depth):
         ''' Expectiminimax algorithm implementation.'''
