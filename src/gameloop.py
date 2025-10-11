@@ -85,10 +85,6 @@ class GameLoop:
 
 
 if __name__ == "__main__":
-    # Regular game
     loop = GameLoop(ai_enabled=False)
     loop.run()
 
-    # AI autoplay
-    # loop = GameLoop(ai_enabled=True, depth=3)
-    # loop.run()

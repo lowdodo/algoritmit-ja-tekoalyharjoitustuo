@@ -47,7 +47,6 @@ class Game2048:
 
     def move(self, direction, add_tile=True):
         moved = False
-        old_board = [row[:] for row in self.board]
 
         if direction == 'left':
             for r in range(self.size):
