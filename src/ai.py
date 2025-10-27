@@ -15,7 +15,7 @@ class AI2048:
         depth (int): The depth to which the expectiminimax algorithm should search.
     '''
 
-    def __init__(self, game: Game2048 = None, depth: int = 2):
+    def __init__(self, game: Game2048 = None, depth: int = 5):
         '''Initializor for the AI player.
 
         Args:
@@ -70,7 +70,6 @@ class AI2048:
                 new_game.board[r][c] = value
                 score, _ = self.expectiminimax(new_game, depth - 0.5)
                 total_score += score * prob / num_empty
-        # Chance nodes never return a move
         return total_score, None
 
     def best_move(self, game: Game2048 = None, depth: int = None):

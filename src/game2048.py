@@ -30,6 +30,7 @@ class Game2048:
             self.board[row][col] = 2 if random.random() < 0.9 else 4
 
     def slide_and_merge(self, row):
+        '''Defines if something is to be merged and increases the tiles value'''
         new_row = [i for i in row if i != 0]
         merged_row = []
         skip = False
@@ -46,6 +47,7 @@ class Game2048:
         return merged_row
 
     def move(self, direction, add_tile=True):
+        '''Checks which key was presseds and rotates the board accordingly'''
         moved = False
 
         if direction == 'left':
